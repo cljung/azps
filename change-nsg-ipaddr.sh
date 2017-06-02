@@ -52,7 +52,7 @@ then
 else
   prio=1001
   echo "Adding $rulename rule to allow $sourceAddrPrefix with priority $prio"
-  azure network nsg rule set -g $rgname --nsg-name $nsgname -n $rulename \
+  azure network nsg rule create -g $rgname --nsg-name $nsgname -n $rulename \
                              --source-address-prefix $sourceAddrPrefix --source-port-range "*" \
                              --destination-address-prefix "*" --destination-port-range "*" \
                              --protocol "*" --direction "Inbound" --access "Allow" \
