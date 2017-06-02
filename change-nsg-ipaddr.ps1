@@ -36,7 +36,6 @@ function UpdateNSGRules() {
                     -Priority $prio -Description $description)
     } else {
         Write-Host "Updating $SecurityRuleName rule to allow $sourceAddrPrefix"
-        $rule.SourceAddressPrefix = $sourceAddrPrefix
         $ret = ($nsg | Set-AzureRmNetworkSecurityRuleConfig -Name $SecurityRuleName `
                         -SourceAddressPrefix $sourceAddrPrefix  -SourcePortRange "*" `
                         -DestinationAddressPrefix "*" -DestinationPortRange "*" `
