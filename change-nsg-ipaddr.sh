@@ -59,4 +59,8 @@ else
                              --destination-address-prefixes "*" --destination-port-ranges "*" \
                              --protocol "*" --direction "Inbound" --access "Allow" \
                              --priority $prio --description "$description"
+<<<<<<< HEAD
 fi
+=======
+fi
+>>>>>>> updated to Azure CLI 2.0
